@@ -22,7 +22,7 @@ module.exports.UserController = {
   patchUser: async (req, res) => {
     try {
       await User.findByIdAndUpdate(req.body.id, {
-        saves: req.body.tweetId
+        saves: req.body.tweetId,
       });
       res.json("User change");
     } catch (error) {
